@@ -1,0 +1,43 @@
+CENARIO : TENTEI IMPORTAR UMA DEPENDENCIA (VALIDATION ) E AS ANOTAÇÕES DELAS NÃO APARECERAM
+
+DADO QUE EU TENTEI USAR O @SIZE
+QUANDO EU TENTEI IMPORTAR O @SIZE
+E VERIFIQUEI QUE NÃO EXISTIA ESSA ANOTAÇÃO
+ENTÃO EU FIZ -> MAVEN -> UPDATE PROJECT; COM O PORTÃO DIREITO NO PROJETO
+E O @SIZE VOLTOU A FUNCIONAR
+
+---------------------------------------------------------------------------------------
+CENARIO TENTEI IMPORTAR UM PACKEAGE 
+EX -> import org.springframework.data.jpa.repository.Temporal;
+E FOI IMPORTANDO UM PACKAGE DIFERENTE DIRETAMENTE NA ANOTAÇÃO
+EX -> @javax.persistence.Temporal
+
+DADO que anteriormente fiz um importe com o mesmo nome do metodo / annotation / classe
+QUANDO o importe é importado com o nome cheio ( nome completo com toda a direção do pacote ) - > @javax.persistence.Temporal
+ENTÃO DEVO VERIFICAR NOS IMPORTES DA CLASSE E APAGAR O NOME QUE PRODUZ O CONFLITO
+
+---------------------------------------------------------------------------------------
+MOMENTO DESCOVERY
+
+CRL + Y avança algo que anteriormente eu retornei
+
+---------------------------------------------------------------------------------------
+CENARIO
+
+DADO
+QUANDO
+ENTÃO
+
+---------------------------------------------------------------------------------------
+CENARIO
+
+DADO
+QUANDO
+ENTÃO
+
+---------------------------------------------------------------------------------------
+CENARIO
+
+DADO
+QUANDO
+ENTÃO
