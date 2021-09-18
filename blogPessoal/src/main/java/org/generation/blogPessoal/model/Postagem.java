@@ -1,7 +1,6 @@
 package org.generation.blogPessoal.model;
 
-import java.sql.Date;
-import java.time.OffsetDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,15 +32,15 @@ public class Postagem {
 	private String texto;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	private OffsetDateTime data = OffsetDateTime.now();
+	private Date data;
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
 
 	public Tema getTema() {
 		return tema;
-	}
-
+	}	
+		
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
@@ -70,11 +69,11 @@ public class Postagem {
 		this.texto = texto;
 	}
 
-	public OffsetDateTime getDate() {
+	public Date getDate() {
 		return data;
 	}
 
-	public void setDate(OffsetDateTime date) {
+	public void setDate(Date date) {
 		this.data = date;
 	}
 }
